@@ -2,11 +2,13 @@ import { configureStore } from '@reduxjs/toolkit'
 
 import tasksReducer from "./ReducerSlices/TasksSlice.tsx";
 import filtersReducer from "./ReducerSlices/FiltersSlice.tsx";
+import countReducer from "./ReducerSlices/CountSlice.tsx";
 
 export const store = configureStore({
     reducer: {
         tasks: tasksReducer,
-        filters: filtersReducer
+        filters: filtersReducer,
+        count: countReducer
     }
 })
 
