@@ -1,7 +1,6 @@
 import {deleteTask, taskDone, type Tasks} from '../../../../redux/ReducerSlices/TasksSlice.tsx'
 import {useAppDispatch} from "../../../../redux/hooks.tsx";
 
-
 interface TaskProps {
     task: Tasks;
     setText: (text: string) => void;
