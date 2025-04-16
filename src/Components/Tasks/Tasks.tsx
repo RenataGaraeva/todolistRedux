@@ -1,15 +1,12 @@
 import Task from "./Task/Task.tsx";
 import {useSelector} from "react-redux";
-import {RootState} from "../../redux/store.tsx";
-
-
+import {selectFilteredTasks} from "../../redux/selector.tsx";
 export default function Tasks () {
 
-    const tasks = useSelector((state: RootState) => state.tasks)
-
+    const filteredTasks = useSelector(selectFilteredTasks);
     return (
         <>
-            {tasks.map((task) => (
+            {filteredTasks.map((task) => (
                 <div key = {task.id}>
                     <Task task = {task}  />
                 </div>
