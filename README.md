@@ -1,54 +1,84 @@
-# React + TypeScript + Vite
+📋 **О проекте**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это список дел
 
-Currently, two official plugins are available:
+✨ **Основной функционал и что я сделала**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Можно добавить дело:
+1) Дела в виде пустой строки добавить нельзя
+2) Дело можно добавить через нажатие кнопки рядом с формой или клавишей Enter 
+- Дело можно удалить или изменить, а также отметить сделанным или активным
+- Добавила фильтрацию: все задачи, активные и сделанные дела
+- Добавила счётчик активных делю Слово "item" склоняю в зависимости от количества дел. Если дело 1, то это "item'. В остальных случаях пишу "items"
+- Можно удалить сразу все сделанные дела
+- Сделала деплой проекта
+- Сделала адаптивную и кроссбраузерную верстку. Сайт корректно отображается на телефонах и компьютерах, чьи экраны разных размеров.
+  Верстка одинакова на основных браузерах: Хром, Яндекс, Edge, Opera, FireFox
 
-## Expanding the ESLint configuration
+🛠 **Технический стек**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- CSS
+- JS
+- Redux
+- Typescript
+- Vite
+- ESLint
+- Prettier
+- Bootstrap
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+🚀 **Как запустить проект**
+
+**Предварительные требования**
+
+Node.js и npm/yarn
+
+**Рекомендуемые расширения VS Code:**
+
+ESLint
+
+Prettier
+
+ES7+ React/Redux/React-Native snippets
+
+**Установка и запуск**
+
+- Клонируйте репозиторий:
+```
+git clone https://github.com/RenataGaraeva/todolistRedux.git
+```
+- Установите зависимости:
+```
+npm install
+```
+- Запустите проект:
+```
+npm run dev
+```
+- Откройте браузер и перейдите по адресу:__
+  http://localhost:5173/
+
+**Скрипты**
+
+```
+"scripts":{
+"dev": "vite",
+"build": "vite build",
+"lint": "eslint .",
+"preview": "vite preview"
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📦 **Зависимости**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React v19.0.0
+- React-Redux v9.2.0
+- Typescript v5.7.2
+- Reduxjs/Toolkit v2.6.1
+- Vite v6.2.0
+- ESLint v9.21.0
+- Prettier v3.5.3
+- Bootstrap v5.3.5
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
+[Ссылка на деплой](https://todolist-redux-seven.vercel.app/)
