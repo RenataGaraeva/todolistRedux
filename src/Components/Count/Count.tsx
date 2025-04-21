@@ -13,11 +13,7 @@ export default function Count () {
         }
     }
     return (
-        <>
-
-            <div>{getCount()} left </div>
-
-        </>
+            <div className="fs-6 fs-md-5 fs-lg-4 row-gap-2">{getCount()} left</div>
     )
 }
 

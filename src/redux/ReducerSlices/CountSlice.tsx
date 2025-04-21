@@ -13,7 +13,7 @@ export const countSlice = createSlice({
                 return state
             })
             .addCase(deleteTask, (state, action) => {
-                if (!action.payload.active) return state - 1;
+                if (action.payload.active) return state - 1;
                 return state
             })
             .addCase(taskDone, (state, action) => {

@@ -1,0 +1,28 @@
+$container-max-widths: (
+        xs: 0,
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px
+);
+@mixin border() {
+border: 1px solid black;
+      padding: 10px;
+}
+
+.custom-border {
+  @include border
+}
+@mixin make-container() {
+  max-width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+
+}
+.custom-container {
+  @include make-container()
+}
+@import "bootstrap/scss/bootstrap";
