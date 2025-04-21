@@ -7,7 +7,7 @@ export default function Tasks () {
     return (
         <>
             {filteredTasks.map((task) => (
-                <div key = {task.id}>
+                <div className="d-flex align-items-center justify-content-center mb-3 justify-content-lg-start" key = {task.id}>
                     <Task task = {task}  />
                 </div>
             ))}

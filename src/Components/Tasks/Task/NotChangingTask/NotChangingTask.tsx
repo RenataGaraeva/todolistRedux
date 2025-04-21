@@ -26,10 +26,10 @@ export default function NotChangingTask ({task, setText, setIsEditing}: TaskProp
 
     return (
         <>
-            <input type="checkbox" onChange={makeIdDoneOrNotDone} checked={!task.active} />
-            <div>{task.task}</div>
-            <input type="button" onClick={handleStartEditing} value="Change"/>
-            <input type="button" onClick={deleteTextTask} value ="Delete"/>
+            <input className="form-check-input me-2" type="checkbox" onChange={makeIdDoneOrNotDone} checked={!task.active} />
+            <div  className="me-2 fs-6 fs-md-5 fs-lg-4" >{task.task}</div>
+                <input  className="btn me-2"  type="button" onClick={handleStartEditing} value="Change" />
+                <input className="btn" type="button" onClick={deleteTextTask} value="Delete" />
         </>
-    )
-}
+            )
+            }

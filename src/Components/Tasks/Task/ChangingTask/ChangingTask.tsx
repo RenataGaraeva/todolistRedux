@@ -31,11 +31,11 @@ export default function ChangingTask ({task, setText, setIsEditing, text}: TaskP
     }
 
     return (
-    <>
-        <input type="checkbox" onChange={makeIdDoneOrNotDone} checked={!task.active} />
-        <input type="text" value={text} onChange={(e) => setText(e.target.value)}/>
-        <input type="button" onClick={handleSaveChanges}/>
-        <input type="button" onClick={deleteTextTask}/>
-    </>
+        <>
+        <input  className="form-check-input me-2" type="checkbox" onChange={makeIdDoneOrNotDone} checked={!task.active}  />
+        <input  className="form-control me-2 w-50" type="text" value={text} onChange={(e) => setText(e.target.value)} />
+        <input  className="btn me-2" type="button" onClick={handleSaveChanges} value="Save"/>
+        <input className="btn" type="button" onClick={deleteTextTask}  value="Delete"/>
+        </>
 )
 }
