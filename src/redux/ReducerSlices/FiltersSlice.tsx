@@ -1,33 +1,33 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-type FilterType = 'all' | 'active' | 'completed' | 'deleteDoneTasks';
+type FilterType = "all" | "active" | "completed" | "deleteDoneTasks";
 
 interface FiltersState {
-    status: FilterType;
+  status: FilterType;
 }
 
 export const filtersSlice = createSlice({
-    name: 'filters',
-    initialState: {
-        status: 'all'
-    } as FiltersState,
-    reducers: {
-        choosedToShowAllTasks: (state) => {
-            state.status = 'all';
-        },
-        choosedToShowActiveTasks: (state) => {
-            state.status = 'active';
-        },
-        choosedToShowDoneTasks: (state) => {
-            state.status = 'completed';
-        }
-    }
+  name: "filters",
+  initialState: {
+    status: "all",
+  } as FiltersState,
+  reducers: {
+    choosedToShowAllTasks: (state) => {
+      state.status = "all";
+    },
+    choosedToShowActiveTasks: (state) => {
+      state.status = "active";
+    },
+    choosedToShowDoneTasks: (state) => {
+      state.status = "completed";
+    },
+  },
 });
 
 export const {
-    choosedToShowAllTasks,
-    choosedToShowActiveTasks,
-    choosedToShowDoneTasks,
+  choosedToShowAllTasks,
+  choosedToShowActiveTasks,
+  choosedToShowDoneTasks,
 } = filtersSlice.actions;
 
 export default filtersSlice.reducer;
