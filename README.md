@@ -84,7 +84,8 @@ npm run dev
 "dev": "vite",
 "build": "vite build",
 "lint": "eslint .",
-"preview": "vite preview"
+"preview": "vite preview",
+"test": "vitest"
 }
 ```
 
@@ -98,5 +99,7 @@ npm run dev
 - ESLint v9.21.0
 - Prettier v3.5.3
 - Bootstrap v5.3.5
+- Vitest v3.1.3
+- Testing-library/react v16.3.0
 
 [Ссылка на деплой](https://todolist-redux-seven.vercel.app/)
