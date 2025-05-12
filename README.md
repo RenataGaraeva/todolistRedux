@@ -39,6 +39,8 @@
 - ESLint
 - Prettier
 - Bootstrap
+- Vitest
+- Testing-library/react
 
 🚀 **Как запустить проект**
 
